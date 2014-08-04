@@ -4,6 +4,7 @@ A simple script that parse all controllers and fetch actions. This can be useful
 
 ### Example
 
-`$example = new Zend_Controller_Parser('../');
- var_export($example->result);`
+```
+$example = new Zend_Controller_Parser('../');
+var_export($example->result);
 
