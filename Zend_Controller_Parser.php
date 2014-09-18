@@ -3,7 +3,7 @@
 /**
  * Description: Parse Zend project and fetch all module/controller/action. If you're using ACL, may help you.
  * Author: mustafauysal
- * Version: 0.1
+ * Version: 0.2
  * License: GPLv2 (or later)
  */
 class Zend_Controller_Parser
@@ -97,7 +97,7 @@ class Zend_Controller_Parser
         foreach ($controllers as $key => $value) {
 
             $file = file_get_contents($value);
-            preg_match('/^class(.+)extends/ms', $file, $data);
+            preg_match('/\bclass(.+)extends/ms', $file, $data);
             if ($data != null && $data != "") {
 
                 preg_match_all('/function\s(.+)Action/', $file, $actions);
